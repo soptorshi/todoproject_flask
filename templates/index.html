@@ -13,7 +13,6 @@
 {% endblock head %}
 {% block body %}
     <center>
-        <h1>Task Master</h1>
         {% if tasks | length < 1 %}
         <h4>No task added. Create one below!</h4>
         {% else %}
@@ -21,6 +20,7 @@
             <tr>
                 <th>Task</th>
                 <th>Added</th>
+                <th>Status</th>
                 <th>Actions</th>
             </tr>
             
@@ -28,6 +28,7 @@
                 <tr>
                     <td>{{ task.content }}</td>
                     <td>{{ task.date_created.date() }}</td>
+                    <td>{{ task.completed }}</td>
                     <td>
                         <a href="/delete/{{ task.id }}">Delete</a>
                         <br>
@@ -38,8 +39,9 @@
             
         </table>
         {% endif %}
-        <form action="/" method="post">
+        <form action="/home/" method="post">
             <input type="text" name="content" id="content" placeholder="Task description">
+            <input type="text" name="completed" id="completed" placeholder="Status" >
             <br>
             <input type="submit" value="Add">
         </form>

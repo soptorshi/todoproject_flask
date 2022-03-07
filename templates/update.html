@@ -13,9 +13,11 @@
 {% endblock head %}
 {% block body %}
     <center>
-        <h1>Update Task</h1>
+        <h2>Update Task</h2>
         <form action="/update/{{ task.id }}" method="post">
-            <input type="text" name="content" id="content" placeholder="Task description" value="{{ task.content }}"">
+            <input type="text" name="content" id="content" value="{{ task.content }}">
+            <br>
+            <input type="text" name="completed" id="completed" value="{{ task.completed }}">
             <br>
             <input type="submit" value="Update">
         </form>

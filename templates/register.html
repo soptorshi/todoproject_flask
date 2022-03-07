@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Register{% endblock title %}
+{% block head %}
+<style>
+    input{
+        margin-top: 5px;
+    }
+</style>
+{% endblock head %}
+{% block body %}
+    <center>
+        <h2>Register</h2>
+        <form action="/register/" method="post">
+            <input type="text" name="fname" id="fname" placeholder="First Name">
+            <br>
+            <input type="text" name="lname" id="lname" placeholder="Last Name">
+            <br>
+            <input type="text" name="email" id="email" placeholder="Email">
+            <br>
+            <input type="text" name="password" id="password" placeholder="Password">
+            <br>
+            <input type="text" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password">
+            <br>
+            <input type="submit" value="Register">
+        </form>
+    </center>
+{% endblock body %}
