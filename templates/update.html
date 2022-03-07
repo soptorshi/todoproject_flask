@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %}
+{% block head %}
+    <style>
+        table,th,td{
+            border:1px solid black;
+            margin: 20px
+        }
+        input{
+            margin-top: 5px;
+        }
+    </style>
+{% endblock head %}
+{% block body %}
+    <center>
+        <h1>Update Task</h1>
+        <form action="/update/{{ task.id }}" method="post">
+            <input type="text" name="content" id="content" placeholder="Task description" value="{{ task.content }}"">
+            <br>
+            <input type="submit" value="Update">
+        </form>
+    </center>
+{% endblock body %}
