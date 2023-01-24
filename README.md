@@ -1,2 +1,2 @@
 # todoproject_flask
-Todo list using flask that can perform basic CRUD operations
+Todo list using flask capable of create, read, update and delete operation via interface.
